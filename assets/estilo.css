@@ -111,7 +111,8 @@ p { margin: 0; text-wrap: pretty; }
   background: linear-gradient(90deg, var(--madeira) 0 60%, #DDBF95 60%);
   border-radius: 0 0 999px 999px;
 }
-.janela-solta { position: relative; width: min(var(--w, 340px), 100%); margin-inline: auto; padding-bottom: 18%; }
+.janela-solta { position: relative; width: min(var(--w, 340px), 100%); margin-inline: auto; }
+.janela-solta::after { content: ""; display: block; aspect-ratio: 1 / .46; }
 html.js .janela { animation: subir 1.2s var(--ease) both; animation-delay: var(--atraso, 0s); }
 @keyframes subir { from { transform: translateY(46px); } to { transform: none; } }
 
@@ -391,10 +392,18 @@ html.js .painel + .painel { margin-top: 0; }
   .menu a:last-child { display: none; }
 }
 @media (max-width: 560px) {
-  .vitrine { grid-template-columns: minmax(0, 1fr); justify-items: center; text-align: center; }
-  .vitrine-info p { margin-inline: auto; }
+  .vitrine { grid-template-columns: 92px minmax(0, 1fr); align-items: start; gap: 1rem; padding: 1.4rem 1.1rem; }
+  .picole { width: 92px; margin-top: .4rem; }
+  .vitrine-info h3 { font-size: 1.55rem; }
+  .vitrine-info p { margin-top: .6rem; font-size: .95rem; line-height: 1.5; min-height: 9em; }
+  .selo { margin-top: .5rem; }
+  .vitrine-info .botao { margin-top: 1rem; min-height: 44px; padding: .6rem 1.1rem; font-size: .95rem; }
+  .vitrine-info .botao .ic { display: none; }
   .campos-duplos { grid-template-columns: minmax(0, 1fr); }
-  .passos { grid-template-columns: minmax(0, 1fr); }
+  .passos { gap: 2.25rem 1rem; }
+  .passo-num { width: 48px; height: 48px; font-size: 1.4rem; }
+  .passo h3 { margin-top: 1rem; font-size: 1.3rem; }
+  .passo p { font-size: .95rem; }
   .canal a { padding-inline: .25rem; }
   .canal-seta { width: 46px; height: 46px; }
   .hero .botoes .botao, .hero-escuro .botoes .botao { flex: 1 1 100%; justify-content: center; }
