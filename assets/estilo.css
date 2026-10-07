@@ -237,6 +237,9 @@ html.js .pingos.caindo .pingo { --s: 1; }
 .rodape .marca { font-size: 2.3rem; color: var(--leite); }
 .rodape .marca svg { width: 36px; height: 36px; }
 .rodape-sobre { margin-top: 1rem; max-width: 30ch; color: var(--rose-claro); }
+.rodape-endereco { margin-top: .9rem; max-width: 30ch; font-size: .95rem; color: var(--rose-claro); }
+.rodape-endereco a { text-decoration: underline; text-decoration-color: rgba(236, 198, 202, .45); }
+.rodape-endereco a:hover { text-decoration-color: currentColor; }
 .rodape-titulo { margin-bottom: .9rem; font-weight: 700; color: var(--rose); }
 .rodape ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .55rem; }
 .rodape ul a { text-decoration: none; }
@@ -397,7 +400,7 @@ html.js .painel + .painel { margin-top: 0; }
   .vitrine-info h3 { font-size: 1.55rem; }
   .vitrine-info p { margin-top: .6rem; font-size: .95rem; line-height: 1.5; min-height: 9em; }
   .selo { margin-top: .5rem; }
-  .vitrine-info .botao { margin-top: 1rem; min-height: 44px; padding: .6rem 1.1rem; font-size: .95rem; }
+  .vitrine-info .botao { margin-top: 1rem; min-height: 44px; padding: .6rem .9rem; font-size: .92rem; white-space: nowrap; }
   .vitrine-info .botao .ic { display: none; }
   .campos-duplos { grid-template-columns: minmax(0, 1fr); }
   .passos { gap: 2.25rem 1rem; }
