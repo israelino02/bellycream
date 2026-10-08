@@ -78,7 +78,12 @@ p { margin: 0; text-wrap: pretty; }
 .topo.rolou { box-shadow: 0 12px 30px -20px rgba(90, 55, 24, .55); }
 .topo-interno { width: var(--pagina); margin-inline: auto; min-height: 94px; display: flex; align-items: center; gap: 2rem; }
 .marca { display: inline-flex; align-items: center; text-decoration: none; line-height: 1; white-space: nowrap; }
-.marca img { height: 56px; width: auto; display: block; }
+.broche { display: inline-grid; place-items: center; background: var(--rose-claro); border: 2px solid var(--choco); box-shadow: 0 6px 14px -8px rgba(90, 55, 24, .55); }
+.broche img { display: block; width: auto; }
+.marca-desktop.broche { border-radius: 999px; padding: .5rem 1.4rem; }
+.marca-desktop img { height: 40px; }
+.marca-mobile.broche { display: none; width: 60px; height: 60px; border-radius: 50%; }
+.marca-mobile img { height: 38px; }
 .menu { display: flex; gap: 1.75rem; margin-left: auto; }
 .menu a { position: relative; padding: .5rem 0; text-decoration: none; font-weight: 600; font-size: .98rem; white-space: nowrap; }
 .menu a::after { content: ""; position: absolute; left: 0; right: 0; bottom: .15rem; height: 2px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
@@ -241,7 +246,10 @@ html.js .pingos.caindo .pingo { --s: 1; }
 /* Rodapé */
 .rodape { background: var(--choco); color: var(--leite); padding-block: clamp(3.5rem, 7vw, 5rem) 2rem; }
 .rodape-grade { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr)); gap: 2.5rem; }
-.rodape .marca img { height: 76px; }
+.rodape .marca-desktop.broche { padding: .7rem 1.8rem; border-width: 3px; }
+.rodape .marca-desktop img { height: 52px; }
+.rodape .marca-mobile.broche { width: 96px; height: 96px; border-width: 3px; }
+.rodape .marca-mobile img { height: 60px; }
 .rodape-sobre { margin-top: 1rem; max-width: 30ch; color: var(--rose-claro); }
 .rodape-endereco { margin-top: .9rem; max-width: 30ch; font-size: .95rem; color: var(--rose-claro); }
 .rodape-endereco a { text-decoration: underline; text-decoration-color: rgba(251, 220, 219, .45); }
@@ -390,6 +398,8 @@ html.js .painel + .painel { margin-top: 0; }
   .menu { order: 3; width: 100%; margin: 0; gap: 1rem; overflow-x: auto; padding-block: .25rem .4rem; scrollbar-width: none; }
   .menu a { font-size: .9rem; }
   .menu::-webkit-scrollbar { display: none; }
+  .marca-desktop.broche { display: none; }
+  .marca-mobile.broche { display: inline-grid; }
 }
 @media (max-width: 760px) {
   .barra-movel { display: flex; }
