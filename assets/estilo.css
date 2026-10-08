@@ -45,7 +45,11 @@ a { color: inherit; text-underline-offset: .22em; text-decoration-thickness: 1.5
 button, input, select, textarea { font: inherit; color: inherit; }
 :focus-visible { outline: 3px solid var(--choco); outline-offset: 3px; border-radius: 8px; }
 .escuro :focus-visible { outline-color: var(--rose); }
-h1, h2, h3 { margin: 0; font-family: var(--fonte-display); font-weight: 400; letter-spacing: -.01em; line-height: 1.02; text-wrap: balance; }
+h1, h2, h3 {
+  margin: 0; font-family: var(--fonte-display); font-weight: 400; letter-spacing: -.01em; line-height: 1.02; text-wrap: balance;
+  -webkit-text-stroke: 1px currentColor;
+  text-shadow: .5px 0 0 currentColor, -.5px 0 0 currentColor, 0 .5px 0 currentColor, 0 -.5px 0 currentColor;
+}
 .hero:not(.hero-escuro) h1 {
   font-family: var(--fonte-script); font-weight: 400; letter-spacing: 0; line-height: 1.15;
   -webkit-text-stroke: .6px var(--choco);
@@ -138,7 +142,12 @@ html.js .janela { animation: subir 1.2s var(--ease) both; animation-delay: var(-
 .faixa-janela { overflow: hidden; }
 .faixa-trilho { display: flex; width: max-content; animation: rolar 48s linear infinite; }
 .faixa-lista { display: flex; }
-.faixa-item { display: inline-flex; align-items: center; gap: 1.5rem; padding-right: 1.5rem; white-space: nowrap; font-family: var(--fonte-display); font-weight: 400; font-size: clamp(1.5rem, 2.6vw, 2rem); line-height: 1.2; }
+.faixa-item {
+  display: inline-flex; align-items: center; gap: 1.5rem; padding-right: 1.5rem; white-space: nowrap;
+  font-family: var(--fonte-display); font-weight: 400; font-size: clamp(1.5rem, 2.6vw, 2rem); line-height: 1.2;
+  -webkit-text-stroke: 1px currentColor;
+  text-shadow: .5px 0 0 currentColor, -.5px 0 0 currentColor, 0 .5px 0 currentColor, 0 -.5px 0 currentColor;
+}
 .faixa-item::after { content: ""; width: .45em; height: .45em; border-radius: 50%; background: var(--rose); }
 @keyframes rolar { to { transform: translateX(-50%); } }
 
@@ -216,7 +225,11 @@ html.js .pingos.caindo .pingo { --s: 1; }
 .canal-nome, .canal-nota { transition: transform .5s var(--ease), color .4s; }
 .canal a:hover .canal-nome, .canal a:hover .canal-nota, .canal a:focus-visible .canal-nome, .canal a:focus-visible .canal-nota { transform: translateX(.75rem); }
 .canal a:hover::before, .canal a:focus-visible::before { transform: scaleY(1); }
-.canal-nome { font-family: var(--fonte-display); font-weight: 400; font-size: clamp(2.2rem, 4.2vw, 3.2rem); line-height: 1; letter-spacing: -.01em; }
+.canal-nome {
+  font-family: var(--fonte-display); font-weight: 400; font-size: clamp(2.2rem, 4.2vw, 3.2rem); line-height: 1; letter-spacing: -.01em;
+  -webkit-text-stroke: 1px currentColor;
+  text-shadow: .5px 0 0 currentColor, -.5px 0 0 currentColor, 0 .5px 0 currentColor, 0 -.5px 0 currentColor;
+}
 .canal-nota { grid-column: 1; font-size: 1rem; color: var(--choco-2); transition: color .4s; }
 .canal a:hover .canal-nota, .canal a:focus-visible .canal-nota { color: var(--rose-claro); }
 .canal-seta { grid-row: 1 / span 2; grid-column: 2; display: grid; place-items: center; width: 54px; height: 54px; border: 1.5px solid currentColor; border-radius: 50%; transition: transform .5s var(--ease); }
@@ -304,7 +317,12 @@ html.js .painel + .painel { margin-top: 0; }
 .passos { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2rem; position: relative; }
 .passos::before { content: ""; position: absolute; left: 28px; right: 28px; top: 27px; height: 4px; border-radius: 4px; background: var(--madeira); }
 .passo { position: relative; }
-.passo-num { position: relative; display: grid; place-items: center; width: 58px; height: 58px; border-radius: 50%; background: var(--rose); font-family: var(--fonte-display); font-weight: 400; font-size: 1.9rem; color: var(--choco); box-shadow: 0 0 0 6px var(--leite); }
+.passo-num {
+  position: relative; display: grid; place-items: center; width: 58px; height: 58px; border-radius: 50%; background: var(--rose);
+  font-family: var(--fonte-display); font-weight: 400; font-size: 1.9rem; color: var(--choco); box-shadow: 0 0 0 6px var(--leite);
+  -webkit-text-stroke: 1px currentColor;
+  text-shadow: .5px 0 0 currentColor, -.5px 0 0 currentColor, 0 .5px 0 currentColor, 0 -.5px 0 currentColor;
+}
 .passo h3 { margin-top: 1.3rem; font-size: clamp(1.5rem, 2.2vw, 1.85rem); }
 .passo p { margin-top: .6rem; color: var(--choco-2); font-size: 1rem; }
 
@@ -346,7 +364,11 @@ html.js .painel + .painel { margin-top: 0; }
 }
 .comanda-topo { display: flex; align-items: center; gap: .5rem; padding-bottom: 1rem; border-bottom: 2px dashed rgba(90, 55, 24, .3); }
 .comanda-topo svg { width: 26px; height: 26px; }
-.comanda-topo strong { font-family: var(--fonte-display); font-weight: 400; font-size: 1.65rem; line-height: 1; }
+.comanda-topo strong {
+  font-family: var(--fonte-display); font-weight: 400; font-size: 1.65rem; line-height: 1;
+  -webkit-text-stroke: 1px currentColor;
+  text-shadow: .5px 0 0 currentColor, -.5px 0 0 currentColor, 0 .5px 0 currentColor, 0 -.5px 0 currentColor;
+}
 .comanda-topo span { margin-left: auto; font-size: .9rem; font-weight: 600; color: var(--choco-3); }
 .comanda dl { margin: .4rem 0 0; }
 .linha { display: grid; grid-template-columns: 6.6rem minmax(0, 1fr); gap: .75rem; padding: .7rem 0; border-bottom: 1px dashed rgba(90, 55, 24, .18); }
