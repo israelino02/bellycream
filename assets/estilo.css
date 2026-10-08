@@ -46,7 +46,11 @@ button, input, select, textarea { font: inherit; color: inherit; }
 :focus-visible { outline: 3px solid var(--choco); outline-offset: 3px; border-radius: 8px; }
 .escuro :focus-visible { outline-color: var(--rose); }
 h1, h2, h3 { margin: 0; font-family: var(--fonte-display); font-weight: 400; letter-spacing: -.01em; line-height: 1.02; text-wrap: balance; }
-.hero:not(.hero-escuro) h1 { font-family: var(--fonte-script); font-weight: 400; letter-spacing: 0; line-height: 1.15; }
+.hero:not(.hero-escuro) h1 {
+  font-family: var(--fonte-script); font-weight: 400; letter-spacing: 0; line-height: 1.15;
+  -webkit-text-stroke: .6px var(--choco);
+  text-shadow: .3px 0 0 var(--choco), -.3px 0 0 var(--choco), 0 .3px 0 var(--choco);
+}
 p { margin: 0; text-wrap: pretty; }
 .envoltorio { width: var(--pagina); margin-inline: auto; }
 .secao { padding-block: clamp(4.5rem, 9vw, 7.5rem); position: relative; }
