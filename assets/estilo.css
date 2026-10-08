@@ -128,7 +128,6 @@ html.js .janela { animation: subir 1.2s var(--ease) both; animation-delay: var(-
 .faixa { position: relative; z-index: 4; background: var(--choco); color: var(--leite); padding-block: 1.05rem; }
 .faixa-janela { overflow: hidden; }
 .faixa-trilho { display: flex; width: max-content; animation: rolar 48s linear infinite; }
-.faixa:hover .faixa-trilho { animation-play-state: paused; }
 .faixa-lista { display: flex; }
 .faixa-item { display: inline-flex; align-items: center; gap: 1.5rem; padding-right: 1.5rem; white-space: nowrap; font-family: var(--fonte-display); font-weight: 400; font-size: clamp(1.5rem, 2.6vw, 2rem); line-height: 1.2; }
 .faixa-item::after { content: ""; width: .45em; height: .45em; border-radius: 50%; background: var(--rose); }
